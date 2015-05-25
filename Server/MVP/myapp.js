@@ -178,6 +178,10 @@ app.get('/video/*', function(req, res){
   res.sendFile(__dirname + '/files/' + req.params[0]);
 })
 
+app.get('/audio/*', function(req, res){
+  res.sendFile(__dirname + '/files/' + req.params[0]);
+})
+
 //
 var server = app.listen(3000, function () {
 
