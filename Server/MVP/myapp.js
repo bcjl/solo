@@ -54,7 +54,7 @@ app.use(busboy());
 // ));
 //
 
-
+// Double checking path, remove later
 app.get('/checking', function(req,res){
   User.findOne({username:'nope'})
   .exec(function(err, user){
@@ -63,6 +63,7 @@ app.get('/checking', function(req,res){
   res.redirect('/')
 });
 
+// Homepage path sends to login
 app.get('/', function(req, res){
   // res.render('index');
   res.redirect('/account/login');
@@ -73,6 +74,7 @@ app.get('/account/login', function(req, res){
   res.render('credentials');
 });
 
+// If username is found create Session
 app.post('/account/login', urlParser, function(req, res){
   var username = req.body.username;
   var password = req.body.password;
