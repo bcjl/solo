@@ -1,0 +1,16 @@
+
+.authform {
+  border-width: 5px;
+  opacity:0.6;
+  height: 30%;
+  width: 30%;
+  background-color: gray;
+}
+
+.authchangebox {
+  border-width: 5px;
+  opacity:0.6;
+  height: 10%;
+  width: 10%;
+  background-color: gray;
+}
